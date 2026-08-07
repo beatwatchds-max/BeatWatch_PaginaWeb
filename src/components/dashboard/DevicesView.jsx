@@ -68,7 +68,7 @@ export default function DevicesView() {
   }, [])
 
   const handleDelete = async (id) => {
-    if (!confirm('¿Eliminar este dispositivo?')) return
+    if (!confirm('Â¿Eliminar este dispositivo?')) return
     try {
       await devicesService.remove(id)
       setDevices((prev) => prev.filter((d) => (d.id || d._id || d.dispositivoId) !== id))
@@ -291,7 +291,7 @@ export default function DevicesView() {
                 )}
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-1">UUID / Número de serie</label>
+                <label className="block text-sm font-medium text-slate-700 mb-1">UUID / NÃºmero de serie</label>
                 <input
                   type="text"
                   name="uuid"

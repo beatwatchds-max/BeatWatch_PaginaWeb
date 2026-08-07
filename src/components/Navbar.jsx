@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { Heart } from 'lucide-react'
 
 export default function Navbar() {
@@ -38,7 +38,7 @@ export default function Navbar() {
           to="/login"
           className="px-4 py-2 border border-blue-500 text-blue-600 rounded-md text-sm font-semibold hover:bg-blue-50 transition-all duration-300"
         >
-          Iniciar sesión
+          Iniciar sesiÃ³n
         </Link>
         <Link
           to="/registro/cuenta"

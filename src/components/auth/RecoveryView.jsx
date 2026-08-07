@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { Heart, Mail, ArrowLeft, CheckCircle, AlertCircle } from 'lucide-react'
 import authService from '../../services/authService'
 
@@ -15,7 +15,7 @@ export default function RecoveryView() {
 
   const validate = (value) => {
     if (!value.trim()) return 'El correo es obligatorio'
-    if (!emailRegex.test(value)) return 'Formato de correo inválido'
+    if (!emailRegex.test(value)) return 'Formato de correo invÃ¡lido'
     return ''
   }
 
@@ -59,7 +59,7 @@ export default function RecoveryView() {
           </div>
           <h1 className="text-4xl font-extrabold mb-4">BitWatch</h1>
           <p className="text-white/80 text-lg max-w-sm">
-            Recupera el acceso a tu plataforma de monitoreo cardíaco.
+            Recupera el acceso a tu plataforma de monitoreo cardÃ­aco.
           </p>
         </div>
       </div>
@@ -71,14 +71,14 @@ export default function RecoveryView() {
             className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Volver al inicio de sesión
+            Volver al inicio de sesiÃ³n
           </Link>
 
           {!sent ? (
             <>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Recuperar Contraseña</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">Recuperar ContraseÃ±a</h2>
               <p className="text-slate-500 mb-8">
-                Ingresa tu correo electrónico y te enviaremos las instrucciones para restablecer tu contraseña.
+                Ingresa tu correo electrÃ³nico y te enviaremos las instrucciones para restablecer tu contraseÃ±a.
               </p>
 
               {error && (
@@ -89,7 +89,7 @@ export default function RecoveryView() {
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Correo Electrónico</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Correo ElectrÃ³nico</label>
                   <div className="relative">
                     <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                     <input
@@ -131,7 +131,7 @@ export default function RecoveryView() {
                 to="/login"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30"
               >
-                Ir al inicio de sesión
+                Ir al inicio de sesiÃ³n
               </Link>
             </div>
           )}

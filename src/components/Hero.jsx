@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import { Heart } from 'lucide-react'
 
 export default function Hero() {
   const stats = [
     { value: '24/7', label: 'Monitoreo continuo' },
-    { value: 'IA', label: 'Detección inteligente' },
+    { value: 'IA', label: 'DetecciÃ³n inteligente' },
     { value: '<30s', label: 'Tiempo de alerta' },
   ]
 
@@ -14,7 +14,7 @@ export default function Hero() {
         <div>
           <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm transition-all duration-300 hover:bg-blue-100 hover:shadow-md hover:shadow-blue-500/10">
             <Heart className="w-4 h-4 animate-heartbeat" fill="currentColor" />
-            Tecnología Médica Avanzada
+            TecnologÃ­a MÃ©dica Avanzada
           </div>
 
           <h1 className="text-6xl font-extrabold leading-tight tracking-tight mt-6">
@@ -25,12 +25,12 @@ export default function Hero() {
               inteligente
             </span>
             <br />
-            <span className="text-slate-900">de arritmias cardíacas en tiempo real</span>
+            <span className="text-slate-900">de arritmias cardÃ­acas en tiempo real</span>
           </h1>
 
           <p className="text-slate-500 text-lg mt-6 max-w-lg">
-            Plataforma de monitoreo cardíaco con inteligencia artificial que detecta
-            arritmias en tiempo real y envía alertas automáticas a profesionales de la salud.
+            Plataforma de monitoreo cardÃ­aco con inteligencia artificial que detecta
+            arritmias en tiempo real y envÃ­a alertas automÃ¡ticas a profesionales de la salud.
           </p>
 
           <div className="flex gap-4 mt-8">
@@ -68,14 +68,14 @@ export default function Hero() {
             </div>
             <div className="relative z-10">
               <div className="flex items-center justify-between mb-6">
-                <div className="text-white/60 text-sm">Monitor Cardíaco</div>
+                <div className="text-white/60 text-sm">Monitor CardÃ­aco</div>
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 rounded-full bg-emerald-400 animate-heartbeat" />
                   <span className="text-emerald-400 text-xs">En vivo</span>
                 </div>
               </div>
               <div className="bg-slate-800/50 rounded-2xl p-6 mb-4 transition-all duration-300 hover:bg-slate-800/70">
-                <div className="text-white/40 text-sm mb-2">Frecuencia Cardíaca</div>
+                <div className="text-white/40 text-sm mb-2">Frecuencia CardÃ­aca</div>
                 <div className="text-4xl font-bold text-rose-400 transition-all duration-300 hover:scale-105">72 <span className="text-lg text-white/40">BPM</span></div>
               </div>
               <div className="bg-slate-800/50 rounded-2xl p-4 h-24 flex items-center transition-all duration-300 hover:bg-slate-800/70">

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 import { CheckCircle, Download, Calendar, Mail, FileText, Check, ShieldCheck } from 'lucide-react'
 import useRegistrationStore from '../../store/registrationStore'
 import reportsService from '../../services/reportsService'
@@ -13,7 +13,7 @@ export default function StepConfirmation() {
   const handleDownloadReceipt = async () => {
     const id = licenciaId || usuarioId
     if (!id) {
-      setDownloadError('No se encontró un identificador para generar el recibo.')
+      setDownloadError('No se encontrÃ³ un identificador para generar el recibo.')
       return
     }
 
@@ -51,14 +51,14 @@ export default function StepConfirmation() {
         <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-4">
           <CheckCircle className="w-12 h-12 text-emerald-500" />
         </div>
-        <h1 className="text-3xl font-extrabold text-emerald-600">¡Licencia activada!</h1>
+        <h1 className="text-3xl font-extrabold text-emerald-600">Â¡Licencia activada!</h1>
         <p className="text-slate-500 mt-2">Tu registro ha sido completado exitosamente.</p>
       </div>
 
       <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-8 text-left mb-8">
         <h2 className="font-bold text-slate-800 mb-6 flex items-center gap-2">
           <FileText className="w-5 h-5 text-slate-400" />
-          Detalles de la activación
+          Detalles de la activaciÃ³n
         </h2>
 
         <div className="grid sm:grid-cols-2 gap-y-4 gap-x-8">
@@ -81,7 +81,7 @@ export default function StepConfirmation() {
             </div>
           </div>
           <div>
-            <p className="text-xs text-slate-400 uppercase tracking-wider">Correo de confirmación</p>
+            <p className="text-xs text-slate-400 uppercase tracking-wider">Correo de confirmaciÃ³n</p>
             <div className="flex items-center gap-2 mt-1">
               <Mail className="w-4 h-4 text-slate-400" />
               <span className="text-sm font-semibold text-slate-800 break-all">{correo || 'No disponible'}</span>
@@ -94,10 +94,10 @@ export default function StepConfirmation() {
           <div className="grid sm:grid-cols-2 gap-2">
             {[
               'Monitoreo 24/7 en tiempo real',
-              'Detección de arritmias con IA',
-              'Alertas automáticas por SMS',
+              'DetecciÃ³n de arritmias con IA',
+              'Alertas automÃ¡ticas por SMS',
               'Dashboard de salud personal',
-              'Historial de 30 días',
+              'Historial de 30 dÃ­as',
               'Soporte por chat',
             ].map((item) => (
               <div key={item} className="flex items-center gap-2 text-sm text-slate-600">

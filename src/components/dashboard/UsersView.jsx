@@ -121,36 +121,36 @@ export default function UsersView() {
     switch (name) {
       case 'nombreCompleto':
         if (!value.trim()) return 'El nombre es obligatorio'
-        if (value.trim().length < 2) return 'Mínimo 2 caracteres'
-        if (!/^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$/.test(value.trim())) {
+        if (value.trim().length < 2) return 'MÃ­nimo 2 caracteres'
+        if (!/^[a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘\s]+$/.test(value.trim())) {
           return 'Solo letras y espacios'
         }
         return ''
 
       case 'correo':
         if (!value.trim()) return 'El correo es obligatorio'
-        if (!emailRegex.test(value.trim())) return 'Formato de correo inválido'
+        if (!emailRegex.test(value.trim())) return 'Formato de correo invÃ¡lido'
         return ''
 
       case 'telefono':
         if (value && !/^\d{10}$/.test(value)) {
-          return 'Teléfono inválido (10 dígitos)'
+          return 'TelÃ©fono invÃ¡lido (10 dÃ­gitos)'
         }
         return ''
 
       case 'contrasena':
         if (tipoRegistro !== USER_TYPES.CUIDADOR) return ''
-        if (!value) return 'La contraseña es obligatoria'
-        if (value.length < 8) return 'La contraseña debe tener mínimo 8 caracteres'
-        if (!/[A-Z]/.test(value)) return 'Debe contener al menos una mayúscula'
-        if (!/[a-z]/.test(value)) return 'Debe contener al menos una minúscula'
-        if (!/[0-9]/.test(value)) return 'Debe contener al menos un número'
+        if (!value) return 'La contraseÃ±a es obligatoria'
+        if (value.length < 8) return 'La contraseÃ±a debe tener mÃ­nimo 8 caracteres'
+        if (!/[A-Z]/.test(value)) return 'Debe contener al menos una mayÃºscula'
+        if (!/[a-z]/.test(value)) return 'Debe contener al menos una minÃºscula'
+        if (!/[0-9]/.test(value)) return 'Debe contener al menos un nÃºmero'
         return ''
 
       case 'confirmarContrasena':
         if (tipoRegistro !== USER_TYPES.CUIDADOR) return ''
-        if (!value) return 'Confirma la contraseña'
-        if (value !== form.contrasena) return 'Las contraseñas no coinciden'
+        if (!value) return 'Confirma la contraseÃ±a'
+        if (value !== form.contrasena) return 'Las contraseÃ±as no coinciden'
         return ''
 
       default:
@@ -163,7 +163,7 @@ export default function UsersView() {
     let formatted = value
 
     if (name === 'nombreCompleto') {
-      formatted = value.replace(/[^a-zA-ZáéíóúñÁÉÍÓÚÑ\s]/g, '')
+      formatted = value.replace(/[^a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘\s]/g, '')
     } else if (name === 'telefono') {
       formatted = value.replace(/\D/g, '').slice(0, 10)
     }
@@ -190,7 +190,7 @@ export default function UsersView() {
         confirmarContrasena:
           form.confirmarContrasena === formatted
             ? ''
-            : 'Las contraseñas no coinciden',
+            : 'Las contraseÃ±as no coinciden',
       }))
     }
   }
@@ -345,7 +345,7 @@ export default function UsersView() {
 
   const handleDelete = async (userId) => {
     if (!userId) return
-    if (!window.confirm('¿Eliminar este usuario?')) return
+    if (!window.confirm('Â¿Eliminar este usuario?')) return
 
     try {
       await usersService.remove(userId)
@@ -453,16 +453,16 @@ export default function UsersView() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4 text-sm">
                 <div>
                   <span className="text-xs text-slate-400 uppercase tracking-wider">
-                    Teléfono
+                    TelÃ©fono
                   </span>
-                  <p className="text-slate-700 mt-1">{phone || '—'}</p>
+                  <p className="text-slate-700 mt-1">{phone || 'â€”'}</p>
                 </div>
 
                 <div>
                   <span className="text-xs text-slate-400 uppercase tracking-wider">
                     Correo
                   </span>
-                  <p className="text-slate-700 mt-1">{email || '—'}</p>
+                  <p className="text-slate-700 mt-1">{email || 'â€”'}</p>
                 </div>
               </div>
 
@@ -470,7 +470,7 @@ export default function UsersView() {
                 <div className="bg-slate-900 rounded-xl p-4">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-xs text-slate-400 uppercase tracking-wider flex items-center gap-1">
-                      <span className="text-emerald-400">🔑</span> Token de Acceso
+                      <span className="text-emerald-400">ðŸ”‘</span> Token de Acceso
                     </span>
 
                     <button
@@ -502,7 +502,7 @@ export default function UsersView() {
                   </div>
 
                   <p className="text-xs text-slate-500 mt-2">
-                    Utiliza este código para que el usuario pueda acceder al monitoreo.
+                    Utiliza este cÃ³digo para que el usuario pueda acceder al monitoreo.
                   </p>
                 </div>
               )}
@@ -552,7 +552,7 @@ export default function UsersView() {
               </select>
 
               <p className="text-xs text-slate-400 mt-1">
-                Se registrará como {selectedUserLabel}.
+                Se registrarÃ¡ como {selectedUserLabel}.
               </p>
             </div>
 
@@ -563,7 +563,7 @@ export default function UsersView() {
                   className="block text-sm font-medium text-slate-700 mb-1"
                 >
                   <span className="flex items-center gap-1">
-                    <span className="text-slate-400">👤</span> Nombre Completo *
+                    <span className="text-slate-400">ðŸ‘¤</span> Nombre Completo *
                   </span>
                 </label>
 
@@ -574,7 +574,7 @@ export default function UsersView() {
                   value={form.nombreCompleto}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  placeholder="Ej: Ramón Hernández"
+                  placeholder="Ej: RamÃ³n HernÃ¡ndez"
                   autoComplete="name"
                   className={getInputClass('nombreCompleto')}
                 />
@@ -593,7 +593,7 @@ export default function UsersView() {
                   className="block text-sm font-medium text-slate-700 mb-1"
                 >
                   <span className="flex items-center gap-1">
-                    <span className="text-slate-400">📱</span> Teléfono
+                    <span className="text-slate-400">ðŸ“±</span> TelÃ©fono
                   </span>
                 </label>
 
@@ -626,7 +626,7 @@ export default function UsersView() {
                 className="block text-sm font-medium text-slate-700 mb-1"
               >
                 <span className="flex items-center gap-1">
-                  <span className="text-slate-400">✉️</span> Correo *
+                  <span className="text-slate-400">âœ‰ï¸</span> Correo *
                 </span>
               </label>
 
@@ -657,7 +657,7 @@ export default function UsersView() {
                     htmlFor="contrasena"
                     className="block text-sm font-medium text-slate-700 mb-1"
                   >
-                    Contraseña *
+                    ContraseÃ±a *
                   </label>
 
                   <input
@@ -667,7 +667,7 @@ export default function UsersView() {
                     value={form.contrasena}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    placeholder="Mínimo 8 caracteres"
+                    placeholder="MÃ­nimo 8 caracteres"
                     autoComplete="new-password"
                     maxLength={128}
                     className={getInputClass('contrasena')}
@@ -681,7 +681,7 @@ export default function UsersView() {
                   )}
 
                   <p className="text-xs text-slate-400 mt-1">
-                    Mínimo 8 caracteres, una mayúscula, una minúscula y un número.
+                    MÃ­nimo 8 caracteres, una mayÃºscula, una minÃºscula y un nÃºmero.
                   </p>
                 </div>
 
@@ -690,7 +690,7 @@ export default function UsersView() {
                     htmlFor="confirmarContrasena"
                     className="block text-sm font-medium text-slate-700 mb-1"
                   >
-                    Confirmar contraseña *
+                    Confirmar contraseÃ±a *
                   </label>
 
                   <input
@@ -700,7 +700,7 @@ export default function UsersView() {
                     value={form.confirmarContrasena}
                     onChange={handleChange}
                     onBlur={handleBlur}
-                    placeholder="Repite la contraseña"
+                    placeholder="Repite la contraseÃ±a"
                     autoComplete="new-password"
                     maxLength={128}
                     className={getInputClass('confirmarContrasena')}
@@ -720,7 +720,7 @@ export default function UsersView() {
             {tipoRegistro === USER_TYPES.PACIENTE && (
               <div className="bg-slate-900 rounded-xl p-4">
                 <span className="text-xs text-slate-400 uppercase tracking-wider flex items-center gap-1 mb-2">
-                  <span className="text-emerald-400">🔑</span> Token que se generará
+                  <span className="text-emerald-400">ðŸ”‘</span> Token que se generarÃ¡
                 </span>
 
                 <div className="flex gap-2">
@@ -735,7 +735,7 @@ export default function UsersView() {
                 </div>
 
                 <p className="text-xs text-slate-500 mt-2">
-                  El token se generará automáticamente al registrar al paciente.
+                  El token se generarÃ¡ automÃ¡ticamente al registrar al paciente.
                 </p>
               </div>
             )}

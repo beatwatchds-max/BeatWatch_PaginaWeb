@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router'
 import { Check, Mail, ShieldCheck, AlertCircle, KeyRound } from 'lucide-react'
 import useRegistrationStore from '../../store/registrationStore'
 import licensesService from '../../services/licensesService'
@@ -24,16 +24,16 @@ export default function StepPayment() {
 
   const features = [
     'Monitoreo 24/7 en tiempo real',
-    'Detección de arritmias con IA',
-    'Alertas automáticas por SMS',
+    'DetecciÃ³n de arritmias con IA',
+    'Alertas automÃ¡ticas por SMS',
     'Dashboard de salud personal',
-    'Historial de 30 días',
+    'Historial de 30 dÃ­as',
     'Soporte por chat',
   ]
 
   const validateEmail = () => {
     if (!email.trim()) return 'El correo es obligatorio'
-    if (!emailRegex.test(email)) return 'Formato de correo inválido'
+    if (!emailRegex.test(email)) return 'Formato de correo invÃ¡lido'
     return ''
   }
 
@@ -44,7 +44,7 @@ export default function StepPayment() {
     if (validationError) return
 
     if (!usuarioId) {
-      setApiError('No se encontró el registro del usuario. Vuelve al paso anterior.')
+      setApiError('No se encontrÃ³ el registro del usuario. Vuelve al paso anterior.')
       return
     }
 
@@ -100,7 +100,7 @@ export default function StepPayment() {
           <div className="space-y-5">
             <div>
               <label htmlFor="license-email" className="block text-sm font-medium text-slate-700 mb-1">
-                Correo para confirmación
+                Correo para confirmaciÃ³n
               </label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
@@ -135,7 +135,7 @@ export default function StepPayment() {
               <div>
                 <p className="text-sm font-semibold text-emerald-800">Flujo de pago endurecido</p>
                 <p className="text-xs text-emerald-700 mt-1">
-                  Este formulario no captura PAN, fecha de expiración ni CVV. Los futuros pagos de importe mayor a cero deben usar tokenización del proveedor de pagos.
+                  Este formulario no captura PAN, fecha de expiraciÃ³n ni CVV. Los futuros pagos de importe mayor a cero deben usar tokenizaciÃ³n del proveedor de pagos.
                 </p>
               </div>
             </div>

@@ -5,14 +5,14 @@ export default function Audience() {
     {
       icon: Users,
       title: 'Pacientes',
-      description: 'Personas con condiciones cardíacas que necesitan monitoreo continuo y alertas tempranas.',
+      description: 'Personas con condiciones cardÃ­acas que necesitan monitoreo continuo y alertas tempranas.',
       iconBg: 'bg-gradient-to-r from-rose-500 to-rose-600',
       cardBg: 'bg-rose-50',
       hoverShadow: 'hover:shadow-rose-500/20',
     },
     {
       icon: Stethoscope,
-      title: 'Médicos',
+      title: 'MÃ©dicos',
       description: 'Profesionales de la salud que requieren datos en tiempo real de sus pacientes.',
       iconBg: 'bg-gradient-to-r from-blue-500 to-blue-600',
       cardBg: 'bg-blue-50',
@@ -21,7 +21,7 @@ export default function Audience() {
     {
       icon: Building2,
       title: 'Hospitales',
-      description: 'Instituciones médicas que buscan optimizar el monitoreo de sus pacientes internados.',
+      description: 'Instituciones mÃ©dicas que buscan optimizar el monitoreo de sus pacientes internados.',
       iconBg: 'bg-gradient-to-r from-purple-500 to-purple-600',
       cardBg: 'bg-indigo-50',
       hoverShadow: 'hover:shadow-purple-500/20',
@@ -29,7 +29,7 @@ export default function Audience() {
     {
       icon: Heart,
       title: 'Familiares',
-      description: 'Familias que quieren estar tranquilas sabiendo que sus seres queridos están monitoreados.',
+      description: 'Familias que quieren estar tranquilas sabiendo que sus seres queridos estÃ¡n monitoreados.',
       iconBg: 'bg-gradient-to-r from-emerald-500 to-emerald-600',
       cardBg: 'bg-emerald-50',
       hoverShadow: 'hover:shadow-emerald-500/20',
@@ -50,7 +50,7 @@ export default function Audience() {
             Clientes <span className="text-blue-600">Principales</span>
           </h2>
           <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
-            Diseñado para todos los actores del ecosistema de salud cardíaca.
+            DiseÃ±ado para todos los actores del ecosistema de salud cardÃ­aca.
           </p>
         </div>
 

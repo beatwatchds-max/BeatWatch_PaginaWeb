@@ -5,25 +5,25 @@ export default function Features() {
     {
       icon: HeartPulse,
       title: 'Monitoreo en tiempo real',
-      description: 'Seguimiento continuo de tu frecuencia cardíaca las 24 horas del día.',
+      description: 'Seguimiento continuo de tu frecuencia cardÃ­aca las 24 horas del dÃ­a.',
       iconBg: 'bg-rose-500',
     },
     {
       icon: Zap,
-      title: 'Detección instantánea',
-      description: 'IA que identifica arritmias en milisegundos con alta precisión.',
+      title: 'DetecciÃ³n instantÃ¡nea',
+      description: 'IA que identifica arritmias en milisegundos con alta precisiÃ³n.',
       iconBg: 'bg-amber-500',
     },
     {
       icon: Bell,
-      title: 'Alertas automáticas',
+      title: 'Alertas automÃ¡ticas',
       description: 'Notificaciones inmediatas a emergencias y contactos de confianza.',
       iconBg: 'bg-blue-500',
     },
     {
       icon: ShieldCheck,
       title: 'Datos seguros',
-      description: 'Encriptación de extremo a extremo para toda tu información médica.',
+      description: 'EncriptaciÃ³n de extremo a extremo para toda tu informaciÃ³n mÃ©dica.',
       iconBg: 'bg-purple-500',
     },
   ]

@@ -1,4 +1,4 @@
-import { Link, useLocation, Outlet } from 'react-router-dom'
+import { Link, useLocation, Outlet } from 'react-router'
 import { ArrowLeft, Heart } from 'lucide-react'
 import useRegistrationStore from '../../store/registrationStore'
 
@@ -70,7 +70,7 @@ export default function RegisterLayout() {
                           : 'bg-slate-200 text-slate-500 group-hover:bg-slate-300'
                       }`}
                     >
-                      {currentStep > step.number ? '✓' : step.number}
+                      {currentStep > step.number ? 'âœ“' : step.number}
                     </div>
                     <span
                       className={`text-xs mt-2 font-medium transition-colors duration-300 ${

@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Steps from './components/Steps'

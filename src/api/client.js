@@ -39,7 +39,7 @@ async function parseResponse(response, responseType) {
     try {
       return JSON.parse(text)
     } catch {
-      throw new Error('El servidor devolvió JSON inválido')
+      throw new Error('El servidor devolviÃ³ JSON invÃ¡lido')
     }
   }
 
@@ -82,7 +82,7 @@ async function request(
   } catch (cause) {
     if (cause?.name === 'AbortError') throw cause
 
-    const error = new Error('No fue posible conectarse con el servidor. Verifica tu conexión.')
+    const error = new Error('No fue posible conectarse con el servidor. Verifica tu conexiÃ³n.')
     error.status = 0
     error.cause = cause
     throw error

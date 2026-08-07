@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router'
 import { Heart, Mail, Lock, Eye, EyeOff, AlertCircle } from 'lucide-react'
 import useAuthStore from '../../store/authStore'
 import authService from '../../services/authService'
@@ -20,11 +20,11 @@ export default function LoginView() {
     switch (name) {
       case 'email':
         if (!value.trim()) return 'El correo es obligatorio'
-        if (!emailRegex.test(value)) return 'Formato de correo inválido'
+        if (!emailRegex.test(value)) return 'Formato de correo invÃ¡lido'
         return ''
       case 'password':
-        if (!value) return 'La contraseña es obligatoria'
-        if (value.length < 8) return 'Mínimo 8 caracteres'
+        if (!value) return 'La contraseÃ±a es obligatoria'
+        if (value.length < 8) return 'MÃ­nimo 8 caracteres'
         return ''
       default:
         return ''
@@ -99,7 +99,7 @@ export default function LoginView() {
           </div>
           <h1 className="text-4xl font-extrabold mb-4">BitWatch</h1>
           <p className="text-white/80 text-lg max-w-sm">
-            Monitoreo cardíaco inteligente con inteligencia artificial en tiempo real.
+            Monitoreo cardÃ­aco inteligente con inteligencia artificial en tiempo real.
           </p>
         </div>
       </div>
@@ -116,7 +116,7 @@ export default function LoginView() {
             </span>
           </div>
 
-          <h2 className="text-2xl font-bold text-slate-900 mb-2">Iniciar Sesión</h2>
+          <h2 className="text-2xl font-bold text-slate-900 mb-2">Iniciar SesiÃ³n</h2>
           <p className="text-slate-500 mb-8">Ingresa tus credenciales para acceder a tu cuenta.</p>
 
           {error && (
@@ -127,7 +127,7 @@ export default function LoginView() {
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Correo Electrónico</label>
+              <label className="block text-sm font-medium text-slate-700 mb-1">Correo ElectrÃ³nico</label>
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 <input
@@ -149,7 +149,7 @@ export default function LoginView() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-1">Contraseña</label>
+              <label className="block text-sm font-medium text-slate-700 mb-1">ContraseÃ±a</label>
               <div className="relative">
                 <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                 <input
@@ -158,7 +158,7 @@ export default function LoginView() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   onBlur={handleBlur}
-                  placeholder="••••••••"
+                  placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                   className={`${getInputClass('password')} pl-10 pr-10`}
                 />
                 <button
@@ -182,7 +182,7 @@ export default function LoginView() {
                 to="/login/recuperar"
                 className="text-sm text-blue-600 hover:text-blue-700 font-medium transition-colors"
               >
-                ¿Olvidaste tu contraseña?
+                Â¿Olvidaste tu contraseÃ±a?
               </Link>
             </div>
 
@@ -191,12 +191,12 @@ export default function LoginView() {
               disabled={loading}
               className="w-full bg-blue-600 text-white rounded-lg px-4 py-2.5 font-medium transition-all duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
             >
-              {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
+              {loading ? 'Iniciando sesiÃ³n...' : 'Iniciar SesiÃ³n'}
             </button>
           </form>
 
           <div className="mt-6 text-center">
-            <span className="text-sm text-slate-500">¿No tienes cuenta? </span>
+            <span className="text-sm text-slate-500">Â¿No tienes cuenta? </span>
             <Link
               to="/registro/cuenta"
               className="text-sm text-blue-600 hover:text-blue-700 font-semibold transition-colors"
@@ -209,7 +209,7 @@ export default function LoginView() {
             to="/"
             className="block text-center text-sm text-slate-400 hover:text-slate-600 transition-colors mt-8"
           >
-            ← Volver al inicio
+            â† Volver al inicio
           </Link>
         </div>
       </div>
