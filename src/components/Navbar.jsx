@@ -38,7 +38,7 @@ export default function Navbar() {
           to="/login"
           className="px-4 py-2 border border-blue-500 text-blue-600 rounded-md text-sm font-semibold hover:bg-blue-50 transition-all duration-300"
         >
-          Iniciar sesiÃ³n
+          Iniciar sesión
         </Link>
         <Link
           to="/registro/cuenta"

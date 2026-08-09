@@ -4,8 +4,8 @@ export default function Steps() {
   const steps = [
     {
       number: 1,
-      title: 'ConexiÃ³n del dispositivo',
-      description: 'Vincula tu monitor cardÃ­aco con la plataforma de forma sencilla y segura.',
+      title: 'Conexión del dispositivo',
+      description: 'Vincula tu monitor cardíaco con la plataforma de forma sencilla y segura.',
       icon: Activity,
       iconBg: 'bg-purple-100 text-purple-600',
       circleBg: 'bg-gradient-to-r from-purple-500 to-rose-400',
@@ -13,7 +13,7 @@ export default function Steps() {
     },
     {
       number: 2,
-      title: 'AnÃ¡lisis con IA',
+      title: 'Análisis con IA',
       description: 'Nuestro algoritmo de inteligencia artificial analiza tus signos vitales en tiempo real.',
       icon: Brain,
       iconBg: 'bg-blue-100 text-blue-600',
@@ -22,8 +22,8 @@ export default function Steps() {
     },
     {
       number: 3,
-      title: 'DetecciÃ³n de anomalÃ­as',
-      description: 'IdentificaciÃ³n automÃ¡tica de arritmias y patrones cardÃ­acos anormales.',
+      title: 'Detección de anomalías',
+      description: 'Identificación automática de arritmias y patrones cardíacos anormales.',
       icon: Wifi,
       iconBg: 'bg-rose-100 text-rose-600',
       circleBg: 'bg-gradient-to-r from-violet-500 to-purple-500',
@@ -31,8 +31,8 @@ export default function Steps() {
     },
     {
       number: 4,
-      title: 'Alerta y prevenciÃ³n',
-      description: 'NotificaciÃ³n inmediata a profesionales de la salud para intervenciÃ³n oportuna.',
+      title: 'Alerta y prevención',
+      description: 'Notificación inmediata a profesionales de la salud para intervención oportuna.',
       icon: Shield,
       iconBg: 'bg-emerald-100 text-emerald-600',
       circleBg: 'bg-gradient-to-r from-emerald-400 to-emerald-600',
@@ -41,7 +41,7 @@ export default function Steps() {
   ]
 
   const metrics = [
-    { value: '99.7%', label: 'PrecisiÃ³n en detecciÃ³n' },
+    { value: '99.7%', label: 'Precisión en detección' },
     { value: '<30s', label: 'Tiempo de alerta' },
     { value: '50K+', label: 'Monitoreos activos' },
     { value: '24/7', label: 'Cobertura continua' },
@@ -56,7 +56,7 @@ export default function Steps() {
             <span className="text-rose-500">seguridad</span>
           </h2>
           <p className="text-slate-500 mt-4 max-w-2xl mx-auto">
-            Nuestro proceso de monitoreo cardÃ­aco transforma datos crudos en informaciÃ³n
+            Nuestro proceso de monitoreo cardíaco transforma datos crudos en información
             vital que puede salvar vidas.
           </p>
         </div>

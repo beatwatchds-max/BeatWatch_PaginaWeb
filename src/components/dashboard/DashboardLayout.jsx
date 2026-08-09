@@ -58,7 +58,7 @@ export default function DashboardLayout() {
             className="w-full flex items-center gap-2 text-slate-400 hover:text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-slate-800 transition-all duration-300 ease-in-out"
           >
             <LogOut className="w-4 h-4" />
-            Cerrar sesiÃ³n
+            Cerrar sesión
           </button>
           <div className="text-xs text-slate-500 mt-3 px-4">BitWatch Dashboard v1.0</div>
         </div>
@@ -69,7 +69,7 @@ export default function DashboardLayout() {
           <h1 className="text-2xl font-bold text-slate-800">Dashboard</h1>
           <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200">
             <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-xs font-medium text-emerald-700">En lÃ­nea</span>
+            <span className="text-xs font-medium text-emerald-700">En línea</span>
           </div>
         </header>
         <main className="flex-1 overflow-auto">

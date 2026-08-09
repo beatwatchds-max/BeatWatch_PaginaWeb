@@ -39,7 +39,7 @@ const useAuthStore = create(
       error: null,
 
       setSession: ({ user, token, usuarioId = null }) => {
-        if (!token) throw new Error('No se puede crear una sesiÃ³n sin token')
+        if (!token) throw new Error('No se puede crear una sesión sin token')
 
         set({
           user: user || null,

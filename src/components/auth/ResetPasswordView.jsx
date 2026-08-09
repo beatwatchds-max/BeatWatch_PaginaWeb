@@ -10,7 +10,7 @@ function getPasswordStrength(pw) {
   if (/[A-Z]/.test(pw)) score++
   if (/[0-9]/.test(pw)) score++
   if (/[^A-Za-z0-9]/.test(pw)) score++
-  if (score <= 1) return { label: 'DÃ©bil', color: 'bg-red-500', width: '25%' }
+  if (score <= 1) return { label: 'Débil', color: 'bg-red-500', width: '25%' }
   if (score === 2) return { label: 'Regular', color: 'bg-amber-500', width: '50%' }
   if (score === 3) return { label: 'Buena', color: 'bg-blue-500', width: '75%' }
   return { label: 'Fuerte', color: 'bg-emerald-500', width: '100%' }
@@ -33,7 +33,7 @@ export default function ResetPasswordView() {
 
   useEffect(() => {
     if (!token) {
-      setError('Token no proporcionado. Solicita un nuevo enlace de recuperaciÃ³n.')
+      setError('Token no proporcionado. Solicita un nuevo enlace de recuperación.')
     }
   }, [token])
 
@@ -50,12 +50,12 @@ export default function ResetPasswordView() {
   const validate = (name, value) => {
     switch (name) {
       case 'password':
-        if (!value) return 'La contraseÃ±a es obligatoria'
-        if (value.length < 8) return 'MÃ­nimo 8 caracteres'
+        if (!value) return 'La contraseña es obligatoria'
+        if (value.length < 8) return 'Mínimo 8 caracteres'
         return ''
       case 'confirmPassword':
-        if (!value) return 'Confirma tu contraseÃ±a'
-        if (value !== password) return 'Las contraseÃ±as no coinciden'
+        if (!value) return 'Confirma tu contraseña'
+        if (value !== password) return 'Las contraseñas no coinciden'
         return ''
       default:
         return ''
@@ -97,7 +97,7 @@ export default function ResetPasswordView() {
       await authService.resetPassword(token, password)
       setSuccess(true)
     } catch (err) {
-      setError(err.message || 'No se pudo restablecer la contraseÃ±a. Intenta de nuevo.')
+      setError(err.message || 'No se pudo restablecer la contraseña. Intenta de nuevo.')
     } finally {
       setLoading(false)
     }
@@ -112,7 +112,7 @@ export default function ResetPasswordView() {
           </div>
           <h1 className="text-4xl font-extrabold mb-4">BitWatch</h1>
           <p className="text-white/80 text-lg max-w-sm">
-            Establece una nueva contraseÃ±a para tu cuenta de monitoreo cardÃ­aco.
+            Establece una nueva contraseña para tu cuenta de monitoreo cardíaco.
           </p>
         </div>
       </div>
@@ -124,7 +124,7 @@ export default function ResetPasswordView() {
             className="flex items-center gap-2 text-slate-500 hover:text-blue-600 transition-colors text-sm font-medium mb-8"
           >
             <ArrowLeft className="w-4 h-4" />
-            Volver al inicio de sesiÃ³n
+            Volver al inicio de sesión
           </Link>
 
           {success ? (
@@ -132,22 +132,22 @@ export default function ResetPasswordView() {
               <div className="w-16 h-16 rounded-full bg-emerald-100 flex items-center justify-center mx-auto mb-6">
                 <CheckCircle className="w-8 h-8 text-emerald-500" />
               </div>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">ContraseÃ±a Restablecida</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">Contraseña Restablecida</h2>
               <p className="text-slate-500 mb-8">
-                Tu contraseÃ±a ha sido actualizada correctamente. SerÃ¡s redirigido al login en {countdown} segundos.
+                Tu contraseña ha sido actualizada correctamente. Serás redirigido al login en {countdown} segundos.
               </p>
               <Link
                 to="/login"
                 className="inline-flex items-center gap-2 bg-blue-600 text-white rounded-lg px-6 py-2.5 font-medium transition-all duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30"
               >
-                Ir al inicio de sesiÃ³n
+                Ir al inicio de sesión
               </Link>
             </div>
           ) : (
             <>
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">Restablecer ContraseÃ±a</h2>
+              <h2 className="text-2xl font-bold text-slate-900 mb-2">Restablecer Contraseña</h2>
               <p className="text-slate-500 mb-8">
-                Ingresa tu nueva contraseÃ±a para acceder a tu cuenta.
+                Ingresa tu nueva contraseña para acceder a tu cuenta.
               </p>
 
               {error && (
@@ -158,7 +158,7 @@ export default function ResetPasswordView() {
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Nueva ContraseÃ±a</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Nueva Contraseña</label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                     <input
@@ -167,7 +167,7 @@ export default function ResetPasswordView() {
                       value={password}
                       onChange={(e) => { setPassword(e.target.value); if (touched.confirmPassword) setFieldErrors((prev) => ({ ...prev, confirmPassword: validate('confirmPassword', confirmPassword) })) }}
                       onBlur={handleBlur}
-                      placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                      placeholder="••••••••"
                       className={`${getInputClass('password')} pl-10 pr-10`}
                     />
                     <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors">
@@ -190,7 +190,7 @@ export default function ResetPasswordView() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Confirmar ContraseÃ±a</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Confirmar Contraseña</label>
                   <div className="relative">
                     <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
                     <input
@@ -199,7 +199,7 @@ export default function ResetPasswordView() {
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                       onBlur={handleBlur}
-                      placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                      placeholder="••••••••"
                       className={`${getInputClass('confirmPassword')} pl-10 pr-10`}
                     />
                     <button type="button" onClick={() => setShowConfirm(!showConfirm)} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors">
@@ -213,7 +213,7 @@ export default function ResetPasswordView() {
                   )}
                   {confirmPassword && !fieldErrors.confirmPassword && touched.confirmPassword && (
                     <p className="text-emerald-500 text-xs mt-1 flex items-center gap-1 animate-fade-in">
-                      <CheckCircle className="w-3 h-3" />Las contraseÃ±as coinciden
+                      <CheckCircle className="w-3 h-3" />Las contraseñas coinciden
                     </p>
                   )}
                 </div>
@@ -223,7 +223,7 @@ export default function ResetPasswordView() {
                   disabled={loading || !token}
                   className="w-full bg-blue-600 text-white rounded-lg px-4 py-2.5 font-medium transition-all duration-300 ease-in-out hover:bg-blue-700 hover:shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
                 >
-                  {loading ? 'Restableciendo...' : 'Restablecer ContraseÃ±a'}
+                  {loading ? 'Restableciendo...' : 'Restablecer Contraseña'}
                 </button>
               </form>
             </>
@@ -233,7 +233,7 @@ export default function ResetPasswordView() {
             to="/"
             className="block text-center text-sm text-slate-400 hover:text-slate-600 transition-colors mt-8"
           >
-            â† Volver al inicio
+            ← Volver al inicio
           </Link>
         </div>
       </div>

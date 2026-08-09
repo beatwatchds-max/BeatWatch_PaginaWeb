@@ -10,7 +10,7 @@ export const env = Object.freeze({
 export function getApiBaseUrl() {
   if (!env.apiBaseUrl) {
     throw new Error(
-      'VITE_API_URL no estÃ¡ configurada. Define la URL del backend en las variables de entorno.',
+      'VITE_API_URL no está configurada. Define la URL del backend en las variables de entorno.',
     )
   }
 

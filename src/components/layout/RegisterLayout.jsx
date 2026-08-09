@@ -70,7 +70,7 @@ export default function RegisterLayout() {
                           : 'bg-slate-200 text-slate-500 group-hover:bg-slate-300'
                       }`}
                     >
-                      {currentStep > step.number ? 'âœ“' : step.number}
+                      {currentStep > step.number ? '✓' : step.number}
                     </div>
                     <span
                       className={`text-xs mt-2 font-medium transition-colors duration-300 ${

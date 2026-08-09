@@ -4,10 +4,10 @@ import { Check } from 'lucide-react'
 export default function Pricing() {
   const features = [
     'Monitoreo 24/7 en tiempo real',
-    'DetecciÃ³n de arritmias con IA',
-    'Alertas automÃ¡ticas por SMS',
+    'Detección de arritmias con IA',
+    'Alertas automáticas por SMS',
     'Dashboard de salud personal',
-    'Historial de 30 dÃ­as',
+    'Historial de 30 días',
     '1 dispositivo conectado',
     'Soporte por chat',
     'Actualizaciones gratuitas',
@@ -21,7 +21,7 @@ export default function Pricing() {
             Plan <span className="text-blue-600">DEMO</span>
           </h2>
           <p className="text-slate-500 mt-4">
-            Comienza a monitorear tu salud cardÃ­aca sin costo.
+            Comienza a monitorear tu salud cardíaca sin costo.
           </p>
         </div>
 
@@ -62,8 +62,8 @@ export default function Pricing() {
               <Check className="w-4 h-4 text-white" />
             </div>
             <div>
-              <div className="font-bold text-slate-800 text-sm">GarantÃ­a de 30 dÃ­as</div>
-              <div className="text-slate-500 text-xs">SatisfacciÃ³n garantizada</div>
+              <div className="font-bold text-slate-800 text-sm">Garantía de 30 días</div>
+              <div className="text-slate-500 text-xs">Satisfacción garantizada</div>
             </div>
           </div>
         </div>

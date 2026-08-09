@@ -31,20 +31,20 @@ export default function StepPersonalData() {
     switch (name) {
       case 'nombre':
         if (!value.trim()) return 'El nombre es obligatorio'
-        if (value.trim().length < 2) return 'MÃ­nimo 2 caracteres'
-        if (!/^[a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘\s]+$/.test(value.trim())) return 'Solo letras y espacios'
+        if (value.trim().length < 2) return 'Mínimo 2 caracteres'
+        if (!/^[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]+$/.test(value.trim())) return 'Solo letras y espacios'
         return ''
       case 'email':
         if (!value.trim()) return 'El correo es obligatorio'
-        if (!emailRegex.test(value)) return 'Formato de correo invÃ¡lido'
+        if (!emailRegex.test(value)) return 'Formato de correo inválido'
         return ''
       case 'telefono':
-        if (!value.trim()) return 'El telÃ©fono es obligatorio'
-        if (!/^\d{10}$/.test(value)) return 'TelÃ©fono invÃ¡lido (10 dÃ­gitos)'
+        if (!value.trim()) return 'El teléfono es obligatorio'
+        if (!/^\d{10}$/.test(value)) return 'Teléfono inválido (10 dígitos)'
         return ''
       case 'password':
-        if (!value) return 'La contraseÃ±a es obligatoria'
-        if (value.length < 8) return 'MÃ­nimo 8 caracteres'
+        if (!value) return 'La contraseña es obligatoria'
+        if (value.length < 8) return 'Mínimo 8 caracteres'
         return ''
       default:
         return ''
@@ -100,7 +100,7 @@ export default function StepPersonalData() {
       })
 
       const usuarioId = data?.usuarioId || data?.id || data?.data?.usuarioId || data?.data?.id
-      if (!usuarioId) throw new Error('El servidor no devolviÃ³ el identificador del usuario')
+      if (!usuarioId) throw new Error('El servidor no devolvió el identificador del usuario')
 
       setUsuarioData(usuarioId, form.email)
       navigate('/registro/pago')
@@ -146,10 +146,10 @@ export default function StepPersonalData() {
                 value={form.nombre}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                placeholder="Juan PÃ©rez GarcÃ­a"
+                placeholder="Juan Pérez García"
                 required
                 maxLength={100}
-                onKeyPress={(e) => { if (!/[a-zA-ZÃ¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘\s]/.test(e.key)) e.preventDefault() }}
+                onKeyPress={(e) => { if (!/[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]/.test(e.key)) e.preventDefault() }}
                 className={getInputClass('nombre')}
               />
             {errors.nombre && touched.nombre && (
@@ -163,7 +163,7 @@ export default function StepPersonalData() {
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
-                Correo ElectrÃ³nico <span className="text-red-500">*</span>
+                Correo Electrónico <span className="text-red-500">*</span>
               </label>
               <input
                 type="email"
@@ -173,7 +173,7 @@ export default function StepPersonalData() {
                 onBlur={handleBlur}
                 placeholder="correo@ejemplo.com"
                 required
-                onKeyPress={(e) => { if (/[Ã¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘]/.test(e.key)) e.preventDefault() }}
+                onKeyPress={(e) => { if (/[áéíóúñÁÉÍÓÚÑ]/.test(e.key)) e.preventDefault() }}
                 className={getInputClass('email')}
               />
               {errors.email && touched.email && (
@@ -185,7 +185,7 @@ export default function StepPersonalData() {
             </div>
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
-                TelÃ©fono <span className="text-red-500">*</span>
+                Teléfono <span className="text-red-500">*</span>
               </label>
               <input
                 type="tel"
@@ -210,7 +210,7 @@ export default function StepPersonalData() {
 
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-1">
-              ContraseÃ±a <span className="text-red-500">*</span>
+              Contraseña <span className="text-red-500">*</span>
             </label>
             <input
               type="password"
@@ -218,7 +218,7 @@ export default function StepPersonalData() {
               value={form.password}
               onChange={handleChange}
               onBlur={handleBlur}
-              placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+              placeholder="••••••••"
               required
               minLength={8}
               className={getInputClass('password')}
@@ -238,7 +238,7 @@ export default function StepPersonalData() {
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Empresa u OrganizaciÃ³n</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Empresa u Organización</label>
                   <input
                     type="text"
                     name="empresa"
@@ -246,7 +246,7 @@ export default function StepPersonalData() {
                     onChange={handleChange}
                     placeholder="Nombre de la empresa"
                     maxLength={100}
-                    onKeyPress={(e) => { if (/[Ã¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘]/.test(e.key)) e.preventDefault() }}
+                    onKeyPress={(e) => { if (/[áéíóúñÁÉÍÓÚÑ]/.test(e.key)) e.preventDefault() }}
                     className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
                   />
                 </div>
@@ -267,13 +267,13 @@ export default function StepPersonalData() {
               </div>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">DirecciÃ³n</label>
+                  <label className="block text-sm font-medium text-slate-700 mb-1">Dirección</label>
                   <input
                     type="text"
                     name="direccion"
                     value={form.direccion}
                     onChange={handleChange}
-                    placeholder="Calle, nÃºmero, colonia"
+                    placeholder="Calle, número, colonia"
                     maxLength={200}
                     className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
                   />
@@ -285,9 +285,9 @@ export default function StepPersonalData() {
                     name="ciudad"
                     value={form.ciudad}
                     onChange={handleChange}
-                    placeholder="Ciudad de MÃ©xico, CDMX"
+                    placeholder="Ciudad de México, CDMX"
                     maxLength={100}
-                    onKeyPress={(e) => { if (/[Ã¡Ã©Ã­Ã³ÃºÃ±ÃÃ‰ÃÃ“ÃšÃ‘]/.test(e.key)) e.preventDefault() }}
+                    onKeyPress={(e) => { if (/[áéíóúñÁÉÍÓÚÑ]/.test(e.key)) e.preventDefault() }}
                     className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
                   />
                 </div>

@@ -10,7 +10,7 @@ export default function Ecosystem() {
     {
       icon: Brain,
       title: 'IA Avanzada',
-      description: 'Algoritmos de Ãºltima generaciÃ³n.',
+      description: 'Algoritmos de última generación.',
     },
     {
       icon: Smartphone,

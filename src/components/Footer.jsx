@@ -3,7 +3,7 @@ import { Heart } from 'lucide-react'
 export default function Footer() {
   const links = [
     { label: 'Privacidad', href: '#' },
-    { label: 'TÃ©rminos', href: '#' },
+    { label: 'Términos', href: '#' },
   ]
 
   return (
