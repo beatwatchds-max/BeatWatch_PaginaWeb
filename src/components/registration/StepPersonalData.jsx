@@ -148,7 +148,7 @@ export default function StepPersonalData() {
                 onBlur={handleBlur}
                 placeholder="Juan Pérez García"
                 required
-                maxLength={100}
+                maxLength={60}
                 onKeyPress={(e) => { if (!/[a-zA-ZáéíóúñÁÉÍÓÚÑ\s]/.test(e.key)) e.preventDefault() }}
                 className={getInputClass('nombre')}
               />
@@ -229,70 +229,6 @@ export default function StepPersonalData() {
                 {errors.password}
               </p>
             )}
-          </div>
-
-          <div className="border-t border-slate-100 pt-6">
-            <p className="text-xs text-slate-400 font-medium uppercase tracking-wider mb-4">
-              Datos Fiscales / Empresa (Opcional)
-            </p>
-            <div className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Empresa u Organización</label>
-                  <input
-                    type="text"
-                    name="empresa"
-                    value={form.empresa}
-                    onChange={handleChange}
-                    placeholder="Nombre de la empresa"
-                    maxLength={100}
-                    onKeyPress={(e) => { if (/[áéíóúñÁÉÍÓÚÑ]/.test(e.key)) e.preventDefault() }}
-                    className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">RFC</label>
-                  <input
-                    type="text"
-                    name="rfc"
-                    value={form.rfc}
-                    onChange={(e) => setForm((prev) => ({ ...prev, rfc: e.target.value.toUpperCase() }))}
-                    onBlur={handleBlur}
-                    placeholder="XAXX010101000"
-                    maxLength={13}
-                    onKeyPress={(e) => { if (!/[a-zA-Z0-9]/.test(e.key)) e.preventDefault() }}
-                    className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Dirección</label>
-                  <input
-                    type="text"
-                    name="direccion"
-                    value={form.direccion}
-                    onChange={handleChange}
-                    placeholder="Calle, número, colonia"
-                    maxLength={200}
-                    className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-1">Ciudad / Estado</label>
-                  <input
-                    type="text"
-                    name="ciudad"
-                    value={form.ciudad}
-                    onChange={handleChange}
-                    placeholder="Ciudad de México, CDMX"
-                    maxLength={100}
-                    onKeyPress={(e) => { if (/[áéíóúñÁÉÍÓÚÑ]/.test(e.key)) e.preventDefault() }}
-                    className="border border-slate-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 focus:outline-none w-full transition-all duration-300 ease-in-out"
-                  />
-                </div>
-              </div>
-            </div>
           </div>
 
           <button
